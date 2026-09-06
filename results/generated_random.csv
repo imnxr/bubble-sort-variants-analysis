@@ -1,0 +1,43 @@
+algorithm,dataset,n,comparisons,swaps,elapsed_us,correct
+Standard Bubble Sort,random,8,28,18,0,true
+Standard Bubble Sort,random,9,36,22,0,true
+Standard Bubble Sort,random,10,45,16,0,true
+Standard Bubble Sort,random,100,4950,2470,6,true
+Standard Bubble Sort,random,1000,499500,253290,429,true
+Standard Bubble Sort,random,5000,12497500,6202414,9663,true
+Standard Bubble Sort,random,10000,49995000,25101416,39147,true
+Optimized Bubble Sort,random,8,27,15,0,true
+Optimized Bubble Sort,random,9,36,26,0,true
+Optimized Bubble Sort,random,10,44,21,0,true
+Optimized Bubble Sort,random,100,4944,2817,7,true
+Optimized Bubble Sort,random,1000,496497,249991,442,true
+Optimized Bubble Sort,random,5000,12496465,6295046,9601,true
+Optimized Bubble Sort,random,10000,49994297,25088591,38342,true
+Cocktail Shaker Sort,random,8,22,9,0,true
+Cocktail Shaker Sort,random,9,26,17,0,true
+Cocktail Shaker Sort,random,10,44,29,0,true
+Cocktail Shaker Sort,random,100,3725,2404,23,true
+Cocktail Shaker Sort,random,1000,383579,254814,1992,true
+Cocktail Shaker Sort,random,5000,9621099,6413690,51721,true
+Cocktail Shaker Sort,random,10000,37696680,25097380,198305,true
+Comb Sort,random,8,31,8,0,true
+Comb Sort,random,9,37,6,0,true
+Comb Sort,random,10,41,7,0,true
+Comb Sort,random,100,1300,273,2,true
+Comb Sort,random,1000,21710,4341,38,true
+Comb Sort,random,5000,153380,29173,253,true
+Comb Sort,random,10000,336733,63389,561,true
+Odd-Even Sort,random,8,28,13,0,true
+Odd-Even Sort,random,9,40,14,0,true
+Odd-Even Sort,random,10,45,19,0,true
+Odd-Even Sort,random,100,4950,2563,8,true
+Odd-Even Sort,random,1000,487512,236351,438,true
+Odd-Even Sort,random,5000,12482503,6290084,9656,true
+Odd-Even Sort,random,10000,49685031,25126487,37441,true
+Adaptive Comb Sort,random,8,62,5,0,true
+Adaptive Comb Sort,random,9,74,7,0,true
+Adaptive Comb Sort,random,10,82,9,0,true
+Adaptive Comb Sort,random,100,2204,265,3,true
+Adaptive Comb Sort,random,1000,39424,4333,48,true
+Adaptive Comb Sort,random,5000,256770,28243,484,true
+Adaptive Comb Sort,random,10000,573476,62846,698,true
