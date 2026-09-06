@@ -1,0 +1,13 @@
+input_type,n,algorithm,comparisons,swaps
+nearly_sorted,10,Standard Bubble Sort,45,3
+nearly_sorted,10,Optimized Bubble Sort,25,3
+nearly_sorted,10,Cocktail Shaker Sort,23,3
+nearly_sorted,10,Comb Sort,18,2
+nearly_sorted,10,Odd-Even Sort,45,3
+nearly_sorted,10,Adaptive Comb Sort,16,2
+reverse_sorted,10,Standard Bubble Sort,45,45
+reverse_sorted,10,Optimized Bubble Sort,45,45
+reverse_sorted,10,Cocktail Shaker Sort,45,45
+reverse_sorted,10,Comb Sort,30,22
+reverse_sorted,10,Odd-Even Sort,45,45
+reverse_sorted,10,Adaptive Comb Sort,26,20
