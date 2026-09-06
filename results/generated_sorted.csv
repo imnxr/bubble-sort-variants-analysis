@@ -1,0 +1,43 @@
+algorithm,dataset,n,comparisons,swaps,elapsed_us,correct
+Standard Bubble Sort,sorted,8,28,0,0,true
+Standard Bubble Sort,sorted,9,36,0,0,true
+Standard Bubble Sort,sorted,10,45,0,0,true
+Standard Bubble Sort,sorted,100,4950,0,3,true
+Standard Bubble Sort,sorted,1000,499500,0,292,true
+Standard Bubble Sort,sorted,5000,12497500,0,7001,true
+Standard Bubble Sort,sorted,10000,49995000,0,28361,true
+Optimized Bubble Sort,sorted,8,7,0,0,true
+Optimized Bubble Sort,sorted,9,8,0,0,true
+Optimized Bubble Sort,sorted,10,9,0,0,true
+Optimized Bubble Sort,sorted,100,99,0,0,true
+Optimized Bubble Sort,sorted,1000,999,0,0,true
+Optimized Bubble Sort,sorted,5000,4999,0,2,true
+Optimized Bubble Sort,sorted,10000,9999,0,5,true
+Cocktail Shaker Sort,sorted,8,7,0,0,true
+Cocktail Shaker Sort,sorted,9,8,0,0,true
+Cocktail Shaker Sort,sorted,10,9,0,0,true
+Cocktail Shaker Sort,sorted,100,99,0,0,true
+Cocktail Shaker Sort,sorted,1000,999,0,0,true
+Cocktail Shaker Sort,sorted,5000,4999,0,4,true
+Cocktail Shaker Sort,sorted,10000,9999,0,8,true
+Comb Sort,sorted,8,24,0,0,true
+Comb Sort,sorted,9,29,0,0,true
+Comb Sort,sorted,10,32,0,0,true
+Comb Sort,sorted,100,1003,0,0,true
+Comb Sort,sorted,1000,18713,0,10,true
+Comb Sort,sorted,5000,123386,0,67,true
+Comb Sort,sorted,10000,276739,0,150,true
+Odd-Even Sort,sorted,8,7,0,0,true
+Odd-Even Sort,sorted,9,8,0,0,true
+Odd-Even Sort,sorted,10,9,0,0,true
+Odd-Even Sort,sorted,100,99,0,0,true
+Odd-Even Sort,sorted,1000,999,0,0,true
+Odd-Even Sort,sorted,5000,4999,0,2,true
+Odd-Even Sort,sorted,10000,9999,0,5,true
+Adaptive Comb Sort,sorted,8,48,0,0,true
+Adaptive Comb Sort,sorted,9,58,0,0,true
+Adaptive Comb Sort,sorted,10,64,0,0,true
+Adaptive Comb Sort,sorted,100,2006,0,1,true
+Adaptive Comb Sort,sorted,1000,37426,0,20,true
+Adaptive Comb Sort,sorted,5000,246772,0,134,true
+Adaptive Comb Sort,sorted,10000,553478,0,379,true
