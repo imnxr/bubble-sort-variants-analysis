@@ -1,41 +1,50 @@
 # Reproducibility
 
-## Current Repository State
+## Two evidence layers
 
-This repository contains the cleaned documentation and the numerical results that were available in the supplied academic project material.
+This repository intentionally distinguishes between the historical academic results and the new runnable implementation.
 
-The original archive did not contain the C++ implementation files. For that reason, this repository intentionally does not fabricate or reconstruct source code and does not claim that the missing large-scale numerical outputs can currently be reproduced from this repository alone.
+### Reported academic results
 
-## To Reproduce the Study Fully
+`data/operation_counts.csv` preserves operation-count values that were present in the supplied project material.
 
-Add the original C++ implementation under `src/`, then document:
+### Reconstructed reference implementation
 
-1. Compiler and version.
-2. Compiler flags.
-3. Operating system and hardware.
-4. Random-number seed, if applicable.
-5. Dataset-generation procedure.
-6. Exact gap-shrink rule for Comb Sort and Adaptive Comb Sort.
-7. Number of repetitions per experiment.
-8. Definition of a comparison.
-9. Definition of a swap/write.
-10. Raw experiment outputs.
+`src/main.cpp` was reconstructed because the supplied archive did not contain the original C++ source. It implements the six documented algorithms and the documented dataset categories and sizes.
 
-## Recommended Structure for the Missing Implementation
+The reconstructed runner uses:
 
-```text
-src/
-├── bubble_sort.cpp
-├── optimized_bubble_sort.cpp
-├── cocktail_shaker_sort.cpp
-├── comb_sort.cpp
-├── odd_even_sort.cpp
-├── adaptive_comb_sort.cpp
-└── benchmark.cpp
+- C++17
+- `-O2 -Wall -Wextra -pedantic`
+- Random seed `20260906ULL`
+- Comb shrink factor `1.3`
+- Sizes `8, 9, 10, 100, 1000, 5000, 10000`
+- Datasets `sorted`, `nearly_sorted`, `reverse`, `random`, `duplicate_heavy`
+- Comparison and swap counters
+- `std::chrono` elapsed-time measurement
+- `std::is_sorted` correctness verification
+
+Because the original implementation details are unavailable, the generated measurements are supplementary rather than a reconstruction of the original experiment output.
+
+## Reproduce
+
+With Make:
+
+```bash
+make run
 ```
 
-Use this only as a suggested organizational structure. The actual course implementation should be added rather than recreated from assumptions.
+Or directly:
 
-## Reporting Rule
+```bash
+g++ -std=c++17 -O2 -Wall -Wextra -pedantic src/main.cpp -o bubble_sort_analysis
+./bubble_sort_analysis results/benchmark_results.csv
+```
 
-Only measurements that were actually produced by the project should be published. Missing results should be marked as unavailable instead of estimated.
+## Interpreting timings
+
+The operation counts are suitable for comparing algorithmic work across machines. Wall-clock values in `elapsed_us` depend on hardware, compiler, optimization settings, operating-system scheduling, and system load.
+
+## Reproducing the academic report exactly
+
+Exact reproduction of the original project is not possible from the supplied archive because its original C++ implementation, exact input arrays, and full raw output were not included. The repository therefore avoids presenting reconstructed measurements as historical measurements.
