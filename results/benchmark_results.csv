@@ -1,0 +1,127 @@
+algorithm,dataset,n,comparisons,swaps,elapsed_us,correct
+Standard Bubble Sort,sorted,8,28,0,0,true
+Standard Bubble Sort,sorted,9,36,0,0,true
+Standard Bubble Sort,sorted,10,45,0,0,true
+Standard Bubble Sort,sorted,100,4950,0,3,true
+Standard Bubble Sort,sorted,1000,499500,0,300,true
+Standard Bubble Sort,sorted,5000,12497500,0,7065,true
+Standard Bubble Sort,sorted,10000,49995000,0,28391,true
+Optimized Bubble Sort,sorted,8,7,0,0,true
+Optimized Bubble Sort,sorted,9,8,0,0,true
+Optimized Bubble Sort,sorted,10,9,0,0,true
+Optimized Bubble Sort,sorted,100,99,0,0,true
+Optimized Bubble Sort,sorted,1000,999,0,5,true
+Optimized Bubble Sort,sorted,5000,4999,0,21,true
+Optimized Bubble Sort,sorted,10000,9999,0,43,true
+Cocktail Shaker Sort,sorted,8,7,0,0,true
+Cocktail Shaker Sort,sorted,9,8,0,0,true
+Cocktail Shaker Sort,sorted,10,9,0,0,true
+Cocktail Shaker Sort,sorted,100,99,0,0,true
+Cocktail Shaker Sort,sorted,1000,999,0,3,true
+Cocktail Shaker Sort,sorted,5000,4999,0,14,true
+Cocktail Shaker Sort,sorted,10000,9999,0,30,true
+Comb Sort,sorted,8,27,0,0,true
+Comb Sort,sorted,9,29,0,0,true
+Comb Sort,sorted,10,34,0,0,true
+Comb Sort,sorted,100,276,0,0,true
+Comb Sort,sorted,1000,2453,0,9,true
+Comb Sort,sorted,5000,14600,0,56,true
+Comb Sort,sorted,10000,30299,0,111,true
+Odd-Even Sort,sorted,8,7,0,0,true
+Odd-Even Sort,sorted,9,8,0,0,true
+Odd-Even Sort,sorted,10,9,0,0,true
+Odd-Even Sort,sorted,100,99,0,0,true
+Odd-Even Sort,sorted,1000,999,0,3,true
+Odd-Even Sort,sorted,5000,4999,0,13,true
+Odd-Even Sort,sorted,10000,9999,0,26,true
+Adaptive Comb Sort,sorted,8,54,0,0,true
+Adaptive Comb Sort,sorted,9,62,0,0,true
+Adaptive Comb Sort,sorted,10,72,0,0,true
+Adaptive Comb Sort,sorted,100,852,0,0,true
+Adaptive Comb Sort,sorted,1000,11342,0,15,true
+Adaptive Comb Sort,sorted,5000,66262,0,85,true
+Adaptive Comb Sort,sorted,10000,141890,0,180,true
+Standard Bubble Sort,nearly_sorted,8,28,2,0,true
+Standard Bubble Sort,nearly_sorted,9,36,2,0,true
+Standard Bubble Sort,nearly_sorted,10,45,2,0,true
+Standard Bubble Sort,nearly_sorted,100,4950,2,3,true
+Standard Bubble Sort,nearly_sorted,1000,499500,2,290,true
+Standard Bubble Sort,nearly_sorted,5000,12497500,2,6993,true
+Standard Bubble Sort,nearly_sorted,10000,49995000,2,28395,true
+Optimized Bubble Sort,nearly_sorted,8,13,2,0,true
+Optimized Bubble Sort,nearly_sorted,9,15,2,0,true
+Optimized Bubble Sort,nearly_sorted,10,17,2,0,true
+Optimized Bubble Sort,nearly_sorted,100,197,2,0,true
+Optimized Bubble Sort,nearly_sorted,1000,1997,2,1,true
+Optimized Bubble Sort,nearly_sorted,5000,9997,2,7,true
+Optimized Bubble Sort,nearly_sorted,10000,19997,2,14,true
+Cocktail Shaker Sort,nearly_sorted,8,14,2,0,true
+Cocktail Shaker Sort,nearly_sorted,9,15,2,0,true
+Cocktail Shaker Sort,nearly_sorted,10,17,2,0,true
+Cocktail Shaker Sort,nearly_sorted,100,199,2,0,true
+Cocktail Shaker Sort,nearly_sorted,1000,1999,2,2,true
+Cocktail Shaker Sort,nearly_sorted,5000,9999,2,12,true
+Cocktail Shaker Sort,nearly_sorted,10000,19999,2,25,true
+Comb Sort,nearly_sorted,8,29,2,0,true
+Comb Sort,nearly_sorted,9,34,2,0,true
+Comb Sort,nearly_sorted,10,41,2,0,true
+Comb Sort,nearly_sorted,100,280,2,0,true
+Comb Sort,nearly_sorted,1000,2484,2,10,true
+Comb Sort,nearly_sorted,5000,14631,2,60,true
+Comb Sort,nearly_sorted,10000,30371,2,121,true
+Odd-Even Sort,nearly_sorted,8,16,2,0,true
+Odd-Even Sort,nearly_sorted,9,17,2,0,true
+Odd-Even Sort,nearly_sorted,10,18,2,0,true
+Odd-Even Sort,nearly_sorted,100,198,2,0,true
+Odd-Even Sort,nearly_sorted,1000,1998,2,4,true
+Odd-Even Sort,nearly_sorted,5000,9998,2,15,true
+Odd-Even Sort,nearly_sorted,10000,19998,2,29,true
+Adaptive Comb Sort,nearly_sorted,8,69,2,0,true
+Adaptive Comb Sort,nearly_sorted,9,75,2,0,true
+Adaptive Comb Sort,nearly_sorted,10,82,2,0,true
+Adaptive Comb Sort,nearly_sorted,100,952,2,0,true
+Adaptive Comb Sort,nearly_sorted,1000,12088,2,15,true
+Adaptive Comb Sort,nearly_sorted,5000,69785,2,89,true
+Adaptive Comb Sort,nearly_sorted,10000,148885,2,186,true
+Standard Bubble Sort,reverse,8,28,28,0,true
+Standard Bubble Sort,reverse,9,36,36,0,true
+Standard Bubble Sort,reverse,10,45,45,0,true
+Standard Bubble Sort,reverse,100,4950,4950,5,true
+Standard Bubble Sort,reverse,1000,499500,499500,678,true
+Standard Bubble Sort,reverse,5000,12497500,12497500,17485,true
+Standard Bubble Sort,reverse,10000,49995000,49995000,71271,true
+Optimized Bubble Sort,reverse,8,28,28,0,true
+Optimized Bubble Sort,reverse,9,36,36,0,true
+Optimized Bubble Sort,reverse,10,45,45,0,true
+Optimized Bubble Sort,reverse,100,4950,4950,4,true
+Optimized Bubble Sort,reverse,1000,499500,499500,661,true
+Optimized Bubble Sort,reverse,5000,12497500,12497500,17362,true
+Optimized Bubble Sort,reverse,10000,49995000,49995000,70317,true
+Cocktail Shaker Sort,reverse,8,28,28,0,true
+Cocktail Shaker Sort,reverse,9,36,36,0,true
+Cocktail Shaker Sort,reverse,10,45,45,0,true
+Cocktail Shaker Sort,reverse,100,4950,4950,4,true
+Cocktail Shaker Sort,reverse,1000,499500,499500,651,true
+Cocktail Shaker Sort,reverse,5000,12497500,12497500,17228,true
+Cocktail Shaker Sort,reverse,10000,49995000,49995000,69982,true
+Comb Sort,reverse,8,25,14,0,true
+Comb Sort,reverse,9,31,18,0,true
+Comb Sort,reverse,10,41,22,0,true
+Comb Sort,reverse,100,803,385,0,true
+Comb Sort,reverse,1000,14852,5390,11,true
+Comb Sort,reverse,5000,127751,49836,100,true
+Comb Sort,reverse,10000,295791,114959,236,true
+Odd-Even Sort,reverse,8,36,28,0,true
+Odd-Even Sort,reverse,9,45,36,0,true
+Odd-Even Sort,reverse,10,54,45,0,true
+Odd-Even Sort,reverse,100,5049,4950,4,true
+Odd-Even Sort,reverse,1000,500499,499500,675,true
+Odd-Even Sort,reverse,5000,12502499,12497500,17431,true
+Odd-Even Sort,reverse,10000,50004999,49995000,70460,true
+Adaptive Comb Sort,reverse,8,53,14,0,true
+Adaptive Comb Sort,reverse,9,66,18,0,true
+Adaptive Comb Sort,reverse,10,82,20,0,true
+Adaptive Comb Sort,reverse,100,1007,385,0,true
+Adaptive Comb Sort,reverse,1000,19196,5390,18,true
+Adaptive Comb Sort,reverse,5000,166270,49836,126,true
+Adaptive Comb Sort,reverse,10000,391287,114959,296,true
