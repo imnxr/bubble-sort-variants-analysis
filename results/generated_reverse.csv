@@ -1,0 +1,43 @@
+algorithm,dataset,n,comparisons,swaps,elapsed_us,correct
+Standard Bubble Sort,reverse,8,28,28,0,true
+Standard Bubble Sort,reverse,9,36,36,0,true
+Standard Bubble Sort,reverse,10,45,45,0,true
+Standard Bubble Sort,reverse,100,4950,4950,4,true
+Standard Bubble Sort,reverse,1000,499500,499500,415,true
+Standard Bubble Sort,reverse,5000,12497500,12497500,12315,true
+Standard Bubble Sort,reverse,10000,49995000,49995000,44683,true
+Optimized Bubble Sort,reverse,8,28,28,0,true
+Optimized Bubble Sort,reverse,9,36,36,0,true
+Optimized Bubble Sort,reverse,10,45,45,0,true
+Optimized Bubble Sort,reverse,100,4950,4950,4,true
+Optimized Bubble Sort,reverse,1000,499500,499500,405,true
+Optimized Bubble Sort,reverse,5000,12497500,12497500,10399,true
+Optimized Bubble Sort,reverse,10000,49995000,49995000,41960,true
+Cocktail Shaker Sort,reverse,8,28,28,0,true
+Cocktail Shaker Sort,reverse,9,36,36,0,true
+Cocktail Shaker Sort,reverse,10,45,45,0,true
+Cocktail Shaker Sort,reverse,100,4950,4950,35,true
+Cocktail Shaker Sort,reverse,1000,499500,499500,3629,true
+Cocktail Shaker Sort,reverse,5000,12497500,12497500,94149,true
+Cocktail Shaker Sort,reverse,10000,49995000,49995000,378758,true
+Comb Sort,reverse,8,31,6,0,true
+Comb Sort,reverse,9,29,6,0,true
+Comb Sort,reverse,10,41,7,0,true
+Comb Sort,reverse,100,1102,122,1,true
+Comb Sort,reverse,1000,19712,1582,15,true
+Comb Sort,reverse,5000,128385,9572,88,true
+Comb Sort,reverse,10000,286738,20078,198,true
+Odd-Even Sort,reverse,8,35,28,0,true
+Odd-Even Sort,reverse,9,48,36,0,true
+Odd-Even Sort,reverse,10,54,45,0,true
+Odd-Even Sort,reverse,100,5049,4950,3,true
+Odd-Even Sort,reverse,1000,500499,499500,383,true
+Odd-Even Sort,reverse,5000,12502499,12497500,9217,true
+Odd-Even Sort,reverse,10000,50004999,49995000,36513,true
+Adaptive Comb Sort,reverse,8,62,6,0,true
+Adaptive Comb Sort,reverse,9,58,6,0,true
+Adaptive Comb Sort,reverse,10,82,7,0,true
+Adaptive Comb Sort,reverse,100,2204,122,2,true
+Adaptive Comb Sort,reverse,1000,39424,1582,26,true
+Adaptive Comb Sort,reverse,5000,256770,9572,155,true
+Adaptive Comb Sort,reverse,10000,573476,20078,360,true
