@@ -1,0 +1,13 @@
+flowchart TD
+    A[Start] --> B[Initialize gap and swapped flag]
+    B --> C[Shrink gap]
+    C --> D[Forward gap comparison pass]
+    D --> E[Backward comparison pass]
+    E --> F{Any swaps?}
+    F -->|No| G[Stop]
+    F -->|Yes| H{Gap > 1?}
+    H -->|Yes| C
+    H -->|No| I[Continue final gap-1 passes]
+    I --> J{Any swaps?}
+    J -->|No| G
+    J -->|Yes| I
