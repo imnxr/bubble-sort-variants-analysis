@@ -1,68 +1,77 @@
 # Comparative Analysis of Bubble Sort Variants
 
-An academic Analysis of Algorithms project investigating the behavior of six Bubble Sort variants through theoretical analysis and controlled operation-count experiments.
+An academic **Analysis of Algorithms** project by **Muhammad Mansoor Ur Rehman** and **Zia** investigating six Bubble Sort variants through theoretical analysis and controlled experiments.
 
-> **Main contribution:** a proposed **Adaptive Comb Sort** hybrid that combines gap reduction, bidirectional traversal, and early termination.
+> **Main contribution:** a proposed **Adaptive Comb Sort** hybrid combining Comb-style gap reduction, Cocktail Shaker-style bidirectional traversal, and early termination.
+
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
+![Academic Project](https://img.shields.io/badge/type-academic%20project-purple)
+![Algorithms](https://img.shields.io/badge/focus-sorting%20%26%20algorithm%20analysis-orange)
 
 ## Project Overview
 
-Bubble Sort is simple and easy to understand, but its basic form performs poorly as input size grows. This project studies several variants that modify how comparisons are organized, how far elements can move in one step, and when unnecessary work can be stopped.
+Bubble Sort is easy to understand but inefficient for large inputs. This project studies how different modifications change its behavior when the input is already sorted, nearly sorted, reverse sorted, random, or duplicate-heavy.
 
-We implemented and compared:
+We compare:
 
 1. **Standard Bubble Sort**
 2. **Optimized Bubble Sort** with early termination
 3. **Cocktail Shaker Sort** with bidirectional passes
-4. **Comb Sort** with progressively reduced comparison gaps
+4. **Comb Sort** with shrinking comparison gaps
 5. **Odd-Even Sort**
-6. **Adaptive Comb Sort**, our proposed hybrid variant
+6. **Adaptive Comb Sort**, our proposed hybrid
 
-The algorithms were evaluated on multiple input distributions, including sorted, nearly sorted, reverse-sorted, random, and duplicate-heavy data.
+The study focuses on **comparisons and swaps/writes** as primary operation-level metrics, with wall-clock timing included only as an optional machine-dependent measurement in the reconstructed runnable implementation.
 
 ## Team
 
 **Muhammad Mansoor Ur Rehman**  
-**Zia**
+**Zia Ur Rehman**
 
 Academic project for **Analysis of Algorithms**.
 
 ## Objectives
 
-- Compare the practical behavior of common Bubble Sort variants.
-- Examine how input order affects comparisons and swaps/writes.
-- Study the impact of adaptive optimizations.
-- Design a hybrid variant that combines useful ideas from established algorithms.
-- Evaluate the proposed variant using controlled experiments.
-- Connect theoretical complexity analysis with empirical observations.
+- Compare six related sorting algorithms.
+- Examine how input order influences algorithmic work.
+- Study the effect of early termination and long-distance comparisons.
+- Design a hybrid sorting variant from established techniques.
+- Evaluate the hybrid using controlled datasets and multiple input sizes.
+- Connect theoretical complexity with empirical observations.
 
 ## Algorithms Compared
 
 | Algorithm | Main idea | Best case | Average case | Worst case | Stable? |
 |---|---|---:|---:|---:|:---:|
-| Standard Bubble Sort | Adjacent comparisons over repeated passes | O(n²) | O(n²) | O(n²) | Yes |
-| Optimized Bubble Sort | Stops when a full pass has no swaps | O(n) | O(n²) | O(n²) | Yes |
-| Cocktail Shaker Sort | Bubble in both directions | O(n) | O(n²) | O(n²) | Yes |
-| Comb Sort | Compare elements separated by a shrinking gap | O(n log n) reported in common analyses* | O(n²) | O(n²) | No |
-| Odd-Even Sort | Alternate odd and even indexed compare-swap phases | O(n) with sortedness detection | O(n²) | O(n²) | Yes |
-| Adaptive Comb Sort | Comb gaps + bidirectional passes + early termination | Experiment-dependent | Experiment-dependent | O(n²) upper bound | No |
+| Standard Bubble Sort | Adjacent comparisons over fixed passes | O(n²) | O(n²) | O(n²) | Yes |
+| Optimized Bubble Sort | Stops after a pass with no swaps | O(n) | O(n²) | O(n²) | Yes |
+| Cocktail Shaker Sort | Alternates forward/backward adjacent passes | O(n) | O(n²) | O(n²) | Yes |
+| Comb Sort | Compares elements separated by a shrinking gap | implementation-dependent | typically better than Bubble in practice | O(n²) | No |
+| Odd-Even Sort | Alternating odd/even compare-swap phases | O(n) with early exit | O(n²) | O(n²) | Yes |
+| Adaptive Comb Sort | Gap reduction + bidirectional passes + early exit | input-dependent | empirically evaluated | O(n²) upper bound | No |
 
-\* Complexity notation for Comb Sort varies by shrink factor and analysis model. This project does not claim a universal tight bound beyond the standard worst-case upper bound.
-
-### Important methodological note
-
-The original study measured **operation counts** such as comparisons and swaps/writes. Those counts were used as the main basis for performance comparison. They should not be interpreted as precise CPU wall-clock timings.
+Complexity claims for Comb Sort can vary with shrink policy and analysis model. This project avoids presenting a single universal tight average-case bound.
 
 ## Adaptive Comb Sort
 
-The proposed Adaptive Comb Sort combines three established ideas:
+The proposed hybrid combines three established ideas:
 
-- **Gap reduction from Comb Sort:** allows distant out-of-order elements to move toward their correct region faster than adjacent-only comparisons.
-- **Bidirectional traversal from Cocktail Shaker Sort:** allows movement in both directions during a cycle.
-- **Early termination from Optimized Bubble Sort:** stops when a cycle makes no swaps.
+```mermaid
+flowchart LR
+    A[Comb Sort] --> C[Adaptive Comb Sort]
+    B[Cocktail Shaker Sort] --> C
+    D[Optimized Bubble Sort] --> C
+    A --> A1[Gap reduction]
+    B --> B1[Bidirectional traversal]
+    D --> D1[Early termination]
+    A1 --> C
+    B1 --> C
+    D1 --> C
+```
 
-The algorithm therefore attempts to gain the long-range movement of Comb Sort while retaining the adaptive behavior of early-exit and bidirectional passes.
+The intended benefit is to move distant out-of-order elements quickly while still allowing the algorithm to react to favorable input structure.
 
-This repository describes Adaptive Comb Sort as a **proposed academic hybrid**, not as a formally proven novel sorting algorithm.
+This is presented as a **proposed academic hybrid**, not as a formally proven novel sorting algorithm.
 
 ## Methodology
 
@@ -71,30 +80,32 @@ flowchart TD
     A[Problem Definition] --> B[Literature Review]
     B --> C[Select Six Variants]
     C --> D[Theoretical Analysis]
-    D --> E[C++ Implementations]
-    E --> F[Controlled Input Generation]
-    F --> G[Run Experiments]
+    D --> E[C++ Implementation]
+    E --> F[Controlled Dataset Generation]
+    F --> G[Benchmark Runs]
     G --> H[Count Comparisons and Swaps/Writes]
-    H --> I[Compare Algorithms]
-    I --> J[Visualize Results]
+    H --> I[Validate Sorted Output]
+    I --> J[Visualize and Compare]
     J --> K[Conclusions and Limitations]
 ```
 
-## Experimental Design
+### Input distributions
 
-The study considered input characteristics that commonly affect adaptive sorting algorithms:
+- **Sorted:** ascending order.
+- **Nearly sorted:** mostly ordered with a small number of displaced elements.
+- **Reverse sorted:** descending order.
+- **Random:** pseudorandom values using a fixed seed in the reference runner.
+- **Duplicate-heavy:** values drawn from a small range to create frequent equal elements.
 
-- Already sorted
-- Nearly sorted
-- Reverse sorted
-- Random
-- Duplicate-heavy
+### Input sizes
 
-Detailed operation-count examples were reported for **n = 8, 9, and 10**. The project also describes scalability experiments for **n = 100, 1,000, 5,000, and 10,000**. Only numerical results that were present in the supplied project material are reproduced here; missing large-scale measurements are not fabricated.
+The documented study includes detailed small cases at **n = 8, 9, 10** and scalability cases at **n = 100, 1,000, 5,000, 10,000**.
 
-## Selected Results
+## Reported Academic Results
 
-For the reported **nearly sorted, n = 10** case:
+These values are reproduced from the supplied academic project material.
+
+### Nearly sorted, n = 10
 
 | Algorithm | Comparisons | Swaps |
 |---|---:|---:|
@@ -105,7 +116,7 @@ For the reported **nearly sorted, n = 10** case:
 | Odd-Even | 45 | 3 |
 | **Adaptive Comb** | **16** | **2** |
 
-For the reported **reverse sorted, n = 10** case:
+### Reverse sorted, n = 10
 
 | Algorithm | Comparisons | Swaps |
 |---|---:|---:|
@@ -116,58 +127,114 @@ For the reported **reverse sorted, n = 10** case:
 | Odd-Even | 45 | 45 |
 | **Adaptive Comb** | **26** | **20** |
 
-These examples illustrate the intended finding: gap-based movement can reduce the amount of work needed to move distant elements, while adaptive termination can prevent unnecessary passes on favorable inputs.
+These are the **reported results from the academic study**. They are kept separate from the newly reconstructed runnable implementation described below.
 
-## Project Structure
+## Reconstructed Runnable Implementation
+
+The original submission archive did not contain the original C++ source. To make this repository complete and reproducible, `src/main.cpp` contains a **reference implementation reconstructed from the documented algorithms and methodology**.
+
+It implements all six algorithms, generates the five documented dataset types, records comparisons/swaps, records optional elapsed time, and verifies every output with `std::is_sorted`.
+
+Because the original source was unavailable, the reconstructed implementation is **not claimed to reproduce the original source code or every reported operation count**. Its generated measurements are therefore supplementary experiments, not replacements for the academic report's reported results.
+
+## Running the Project
+
+### Requirements
+
+- C++17 compiler such as `g++`
+- GNU Make (optional)
+
+### With Make
+
+```bash
+make run
+```
+
+This builds `src/main.cpp` and writes the generated benchmark to:
+
+```text
+results/benchmark_results.csv
+```
+
+### Without Make
+
+```bash
+g++ -std=c++17 -O2 -Wall -Wextra -pedantic src/main.cpp -o bubble_sort_analysis
+./bubble_sort_analysis results/benchmark_results.csv
+```
+
+### Output columns
+
+| Column | Meaning |
+|---|---|
+| `algorithm` | Sorting algorithm used |
+| `dataset` | Input distribution |
+| `n` | Input size |
+| `comparisons` | Element-order comparisons |
+| `swaps` | Data exchanges performed |
+| `elapsed_us` | Measured wall-clock time in microseconds |
+| `correct` | Whether the final array was sorted |
+
+Wall-clock times are hardware/compiler dependent and should not be used as universal algorithmic constants.
+
+## Repository Structure
 
 ```text
 bubble-sort-variants-analysis/
+├── .github/
+│   └── workflows/
+│       └── cpp-build.yml
 ├── README.md
+├── LICENSE
+├── Makefile
+├── data/
+│   └── operation_counts.csv
+├── diagrams/
+│   ├── adaptive-comb-sort.mermaid
+│   ├── algorithm-family.mermaid
+│   └── methodology.mermaid
 ├── docs/
 │   ├── academic-report.md
 │   ├── algorithm-comparison.md
+│   ├── implementation-notes.md
 │   ├── methodology.md
 │   └── reproducibility.md
-├── diagrams/
-│   ├── methodology.svg
-│   ├── algorithm-family.svg
-│   └── adaptive-comb-sort.svg
-├── data/
-│   └── operation_counts.csv
 ├── results/
 │   ├── README.md
-│   └── charts/
+│   ├── generated_sorted.csv
+│   ├── generated_nearly_sorted.csv
+│   ├── generated_reverse.csv
+│   ├── generated_random.csv
+│   └── generated_duplicate_heavy.csv
 └── src/
-    └── README.md
+    ├── README.md
+    └── main.cpp
 ```
 
-## Results and Interpretation
+## Key Findings
 
-The study suggests several clear patterns:
+The original study demonstrates that algorithmic changes can substantially reduce work on particular input structures. Early termination is especially effective on favorable inputs, while gap-based comparisons help move distant elements.
 
-- Basic Bubble Sort is highly sensitive to input size and does not adapt to sortedness unless an early-exit condition is added.
-- Optimized Bubble Sort can become linear on already sorted data because it stops after detecting no swaps.
-- Cocktail Shaker Sort can improve movement in both directions, especially when small elements and large elements are simultaneously far from their destinations.
-- Comb Sort reduces long-distance disorder efficiently by comparing elements separated by a shrinking gap.
-- Odd-Even Sort is structurally interesting and can support parallel formulations, but its sequential operation counts do not automatically make it superior to the other variants.
-- Adaptive Comb Sort produced the lowest reported operation counts in several of the supplied small-input cases, motivating it as a promising hybrid for further investigation.
+The reconstructed reference implementation is intentionally documented as a separate experimental layer. It can be rerun, inspected, modified, and extended without conflating its measurements with the values reported in the original academic study.
 
 ## Limitations
 
-This project is an academic comparative study, not a production benchmarking suite. In particular:
+- The academic study emphasizes operation counts rather than statistically rigorous wall-clock benchmarking.
+- The original C++ submission source was unavailable, so the repository's implementation is a reconstruction based on the documented design.
+- The proposed Adaptive Comb Sort has no formal proof of asymptotic superiority over established algorithms.
+- Results depend on implementation details, gap policy, compiler settings, hardware, and dataset generation.
 
-1. The available report emphasizes operation counts rather than statistically rigorous CPU-time benchmarking.
-2. Large-input numerical tables referenced in the report were not all included in the supplied project files.
-3. The proposed Adaptive Comb Sort was evaluated empirically but does not have a formal proof that it dominates the other algorithms across all input distributions.
-4. Performance can depend on implementation details, compiler settings, hardware, gap-shrink policy, and dataset generation.
+## Further Work
 
-## Reproducibility
+- Refactor the implementation into reusable headers and benchmark modules.
+- Add repeated trials and statistical summaries.
+- Compare multiple Comb shrink factors.
+- Add formal invariant-based correctness tests.
+- Investigate whether alternative adaptive policies can retain the reported small-input advantages without adding excessive comparisons.
 
-The repository is organized so the source implementation, experiment scripts, raw outputs, and figures can be added without changing the documented methodology. See [`docs/reproducibility.md`](docs/reproducibility.md).
+## Academic Report
 
-## Academic Context
-
-This repository contains the cleaned and corrected public-facing version of our Analysis of Algorithms project. The academic report is included in [`docs/academic-report.md`](docs/academic-report.md).
+The cleaned and corrected public-facing academic write-up is available in [`docs/academic-report.md`](docs/academic-report.md).
 
 ## License
 
