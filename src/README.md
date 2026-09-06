@@ -1,20 +1,29 @@
 # Source Code
 
-The original academic project archive supplied for this repository did not include the C++ implementation files.
+`main.cpp` is the runnable C++17 reference implementation for this repository.
 
-The implementation should be uploaded here from the actual project source rather than reconstructed from the report.
+## Included algorithms
 
-Suggested organization:
+- Standard Bubble Sort
+- Optimized Bubble Sort
+- Cocktail Shaker Sort
+- Comb Sort
+- Odd-Even Sort
+- Adaptive Comb Sort
 
-```text
-src/
-├── bubble_sort.cpp
-├── optimized_bubble_sort.cpp
-├── cocktail_shaker_sort.cpp
-├── comb_sort.cpp
-├── odd_even_sort.cpp
-├── adaptive_comb_sort.cpp
-└── benchmark.cpp
-```
+## Instrumentation
 
-Do not treat these filenames as evidence that the original project used exactly this structure. They are only a recommended repository organization.
+Each implementation records:
+
+- element comparisons,
+- swaps,
+- elapsed wall-clock time,
+- final sorting correctness.
+
+The benchmark runner generates all five documented dataset categories at the documented input sizes.
+
+## Important provenance note
+
+The original course submission source was not present in the supplied archive. Therefore, `main.cpp` is a **reconstructed reference implementation based on the documented project design**, not a recovered copy of the original source.
+
+That distinction is also documented in [`../docs/implementation-notes.md`](../docs/implementation-notes.md).
