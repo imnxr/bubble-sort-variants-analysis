@@ -1,0 +1,26 @@
+name: C++ Build and Benchmark
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: g++ -std=c++17 -O2 -Wall -Wextra -pedantic src/main.cpp -o bubble_sort_analysis
+
+      - name: Run benchmark
+        run: ./bubble_sort_analysis results/ci_benchmark_results.csv
+
+      - name: Verify benchmark output
+        run: |
+          test -s results/ci_benchmark_results.csv
+          ! grep -q ',false$' results/ci_benchmark_results.csv
