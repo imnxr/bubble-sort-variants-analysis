@@ -1,0 +1,43 @@
+algorithm,dataset,n,comparisons,swaps,elapsed_us,correct
+Standard Bubble Sort,nearly_sorted,8,28,2,0,true
+Standard Bubble Sort,nearly_sorted,9,36,2,0,true
+Standard Bubble Sort,nearly_sorted,10,45,2,0,true
+Standard Bubble Sort,nearly_sorted,100,4950,2,3,true
+Standard Bubble Sort,nearly_sorted,1000,499500,2,275,true
+Standard Bubble Sort,nearly_sorted,5000,12497500,2,7040,true
+Standard Bubble Sort,nearly_sorted,10000,49995000,2,28712,true
+Optimized Bubble Sort,nearly_sorted,8,13,2,0,true
+Optimized Bubble Sort,nearly_sorted,9,15,2,0,true
+Optimized Bubble Sort,nearly_sorted,10,17,2,0,true
+Optimized Bubble Sort,nearly_sorted,100,197,2,0,true
+Optimized Bubble Sort,nearly_sorted,1000,1997,2,1,true
+Optimized Bubble Sort,nearly_sorted,5000,9997,2,5,true
+Optimized Bubble Sort,nearly_sorted,10000,19997,2,10,true
+Cocktail Shaker Sort,nearly_sorted,8,13,2,0,true
+Cocktail Shaker Sort,nearly_sorted,9,15,2,0,true
+Cocktail Shaker Sort,nearly_sorted,10,17,2,0,true
+Cocktail Shaker Sort,nearly_sorted,100,197,2,0,true
+Cocktail Shaker Sort,nearly_sorted,1000,1997,2,1,true
+Cocktail Shaker Sort,nearly_sorted,5000,9997,2,8,true
+Cocktail Shaker Sort,nearly_sorted,10000,19997,2,16,true
+Comb Sort,nearly_sorted,8,31,2,0,true
+Comb Sort,nearly_sorted,9,37,2,0,true
+Comb Sort,nearly_sorted,10,41,2,0,true
+Comb Sort,nearly_sorted,100,1102,2,0,true
+Comb Sort,nearly_sorted,1000,19712,2,10,true
+Comb Sort,nearly_sorted,5000,128385,2,69,true
+Comb Sort,nearly_sorted,10000,286738,2,155,true
+Odd-Even Sort,nearly_sorted,8,14,2,0,true
+Odd-Even Sort,nearly_sorted,9,16,2,0,true
+Odd-Even Sort,nearly_sorted,10,18,2,0,true
+Odd-Even Sort,nearly_sorted,100,198,2,0,true
+Odd-Even Sort,nearly_sorted,1000,1998,2,1,true
+Odd-Even Sort,nearly_sorted,5000,9998,2,5,true
+Odd-Even Sort,nearly_sorted,10000,19998,2,10,true
+Adaptive Comb Sort,nearly_sorted,8,62,2,0,true
+Adaptive Comb Sort,nearly_sorted,9,74,2,0,true
+Adaptive Comb Sort,nearly_sorted,10,82,2,0,true
+Adaptive Comb Sort,nearly_sorted,100,2204,2,1,true
+Adaptive Comb Sort,nearly_sorted,1000,39424,2,21,true
+Adaptive Comb Sort,nearly_sorted,5000,256770,2,139,true
+Adaptive Comb Sort,nearly_sorted,10000,573476,2,310,true
