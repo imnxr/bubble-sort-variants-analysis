@@ -1,0 +1,43 @@
+algorithm,dataset,n,comparisons,swaps,elapsed_us,correct
+Standard Bubble Sort,duplicate_heavy,8,28,16,0,true
+Standard Bubble Sort,duplicate_heavy,9,36,19,0,true
+Standard Bubble Sort,duplicate_heavy,10,45,17,0,true
+Standard Bubble Sort,duplicate_heavy,100,4950,2253,7,true
+Standard Bubble Sort,duplicate_heavy,1000,499500,228406,375,true
+Standard Bubble Sort,duplicate_heavy,5000,12497500,5582350,9281,true
+Standard Bubble Sort,duplicate_heavy,10000,49995000,22502598,36912,true
+Optimized Bubble Sort,duplicate_heavy,8,27,11,0,true
+Optimized Bubble Sort,duplicate_heavy,9,36,22,0,true
+Optimized Bubble Sort,duplicate_heavy,10,35,14,0,true
+Optimized Bubble Sort,duplicate_heavy,100,4719,2340,7,true
+Optimized Bubble Sort,duplicate_heavy,1000,493935,222534,379,true
+Optimized Bubble Sort,duplicate_heavy,5000,12370744,5684318,9190,true
+Optimized Bubble Sort,duplicate_heavy,10000,49473269,22245947,37394,true
+Cocktail Shaker Sort,duplicate_heavy,8,27,19,0,true
+Cocktail Shaker Sort,duplicate_heavy,9,30,16,0,true
+Cocktail Shaker Sort,duplicate_heavy,10,30,14,0,true
+Cocktail Shaker Sort,duplicate_heavy,100,3725,2281,22,true
+Cocktail Shaker Sort,duplicate_heavy,1000,377235,222914,2036,true
+Cocktail Shaker Sort,duplicate_heavy,5000,9499924,5705784,46225,true
+Cocktail Shaker Sort,duplicate_heavy,10000,37502499,22472295,182528,true
+Comb Sort,duplicate_heavy,8,24,5,0,true
+Comb Sort,duplicate_heavy,9,37,5,0,true
+Comb Sort,duplicate_heavy,10,41,6,0,true
+Comb Sort,duplicate_heavy,100,1102,128,1,true
+Comb Sort,duplicate_heavy,1000,19712,1295,18,true
+Comb Sort,duplicate_heavy,5000,128385,6531,110,true
+Comb Sort,duplicate_heavy,10000,316735,13177,248,true
+Odd-Even Sort,duplicate_heavy,8,28,6,0,true
+Odd-Even Sort,duplicate_heavy,9,32,12,0,true
+Odd-Even Sort,duplicate_heavy,10,45,15,0,true
+Odd-Even Sort,duplicate_heavy,100,4653,2182,8,true
+Odd-Even Sort,duplicate_heavy,1000,452547,234189,422,true
+Odd-Even Sort,duplicate_heavy,5000,11327734,5638206,8977,true
+Odd-Even Sort,duplicate_heavy,10000,44925507,22526260,33782,true
+Adaptive Comb Sort,duplicate_heavy,8,62,5,0,true
+Adaptive Comb Sort,duplicate_heavy,9,74,9,0,true
+Adaptive Comb Sort,duplicate_heavy,10,82,10,0,true
+Adaptive Comb Sort,duplicate_heavy,100,2204,120,2,true
+Adaptive Comb Sort,duplicate_heavy,1000,39424,1303,29,true
+Adaptive Comb Sort,duplicate_heavy,5000,256770,6422,185,true
+Adaptive Comb Sort,duplicate_heavy,10000,573476,12745,397,true
